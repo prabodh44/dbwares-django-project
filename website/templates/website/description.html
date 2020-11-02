@@ -1,0 +1,22 @@
+{% extends 'website/base.html' %}
+
+{% block title %} Accessories {% endblock %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1 class="display-4">
+        {{product.particulars}}
+    </h1>
+    <p class="lead">
+        {{ product.description }}
+    </p>
+    <hr class="my-4">
+    <form action="https://www.google.com/search" method="GET">
+        <input type="hidden" name="query" value="{{product.particulars}}" />
+        <button class="btn btn-primary btn-lg" type="Submit">Learn More</button>
+    </form>
+  </div>
+
+
+  {% endblock %}
